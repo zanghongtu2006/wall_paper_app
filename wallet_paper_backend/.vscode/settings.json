@@ -1,0 +1,8 @@
+{
+  "go.formatTool": "gopls",
+  "go.useLanguageServer": true,
+  "go.lintTool": "golint",
+  "go.buildOnSave": "package",
+  "go.lintOnSave": "package",
+  "go.vetOnSave": "package"
+}
