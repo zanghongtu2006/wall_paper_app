@@ -10,7 +10,7 @@ import (
 var DB *gorm.DB
 
 func InitDB() {
-    dsn := "root:example@tcp(127.0.0.1:3306)/wallpaper?charset=utf8mb4&parseTime=True&loc=Local"
+    dsn := "root:example@tcp(127.0.0.1:3306)/wall_paper?charset=utf8mb4&parseTime=True&loc=Local"
     var err error
     DB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
     if err != nil {

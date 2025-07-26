@@ -10,6 +10,6 @@ type Wallpaper struct {
 	ImageUrls StringArray `json:"imageUrls"` // 一个或多个图
 	Author    string   `json:"author"`
 	Category  string   `json:"category"`
-	Tags      []string `json:"tags"`      // 标签列表
+	Tags      StringArray `json:"tags"`      // 标签列表
 	Thumbnail string   `json:"thumbnail"` // 缩略图 URL
 }
