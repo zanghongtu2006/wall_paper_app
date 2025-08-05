@@ -24,3 +24,18 @@ func GetWallpaperByID(id string) (*model.Wallpaper, error) {
 	}
 	return &wallpaper, nil
 }
+
+// CreateWallpaper 创建一条新的壁纸记录
+func CreateWallpaper(w *model.Wallpaper) error {
+	return config.DB.Create(w).Error
+}
+
+// UpdateWallpaper 更新已有壁纸信息
+func UpdateWallpaper(id string, updated *model.Wallpaper) error {
+	return config.DB.Model(&model.Wallpaper{}).Where("id = ?", id).Updates(updated).Error
+}
+
+// DeleteWallpaper 根据 ID 删除壁纸
+func DeleteWallpaper(id string) error {
+	return config.DB.Delete(&model.Wallpaper{}, "id = ?", id).Error
+}

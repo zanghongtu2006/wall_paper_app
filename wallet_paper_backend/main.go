@@ -16,6 +16,9 @@ func main() {
         &model.User{},
         &model.Category{},
         &model.Wallpaper{},
+        &model.WallpaperImage{},
+        &model.LockScreen{},
+        &model.LockScreenImage{},
     )
 
     r := router.InitRouter()
